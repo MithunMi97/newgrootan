@@ -2,8 +2,9 @@ const express = require("express");
 const router = express.Router();
 const bodyParser = require('body-parser');
 router.use(bodyParser.json());
+
 const { create } = require("../controllers/add");
-router.post("/addcar/create", create);
+router.post("/add/create", create);
 
 
 module.exports = router;

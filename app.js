@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 // import routes
-const addcarRoutes = require("./routes/addcar");
+const addRoutes = require("./routes/add");
 
 // app
 const app = express();
@@ -16,7 +16,7 @@ mongoose
     .then(() => console.log("DB Connected"));
 
 // routes middleware
-app.use("/api", addcarRoutes);
+app.use("/api", addRoutes);
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {

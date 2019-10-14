@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { ObjectId } = mongoose.Schema;
 
-const AddcarSchema = new mongoose.Schema(
+const AddSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -35,55 +35,47 @@ const AddcarSchema = new mongoose.Schema(
         }, 
         LanguagesKnown: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         }, 
         FavouriteColor: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         }, 
         
         Email: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         }, 
         StartTime: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         }, 
         WebsiteAddress: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         }, 
         Title: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         },
-        Subtitle: {
+        SubTitle: {
             type: String,
-            trim: true,
             required: true,
             maxlength: 32
         }, 
         CGPA: {
-            type: String,
-            trim: true,
+            type: Number,
             required: true,
             maxlength: 32
-        }
+        },
     },
     { timestamps: true }
 );
 
-module.exports = mongoose.model("Addcar", AddcarSchema);
+module.exports = mongoose.model("Add", AddSchema);

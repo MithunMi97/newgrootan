@@ -1,0 +1,79 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-center">
+                <h3 class="heading">Registration Form</h3>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name </label>
+                    <input type= "text" class="form-control" id="name" placeholder="Enter Name" #tr [(ngModel)]="reg.Name">
+ {{tr}}
+                </div>
+                <div class="form-group">
+                    <label>Age </label>
+                    <input type="number" class="form-control" id="age" placeholder="Enter Age"[(ngModel)]="reg.Age">
+                </div>
+                <div class="form-group">
+                    <label>Country </label>
+                    <select name="country" id="country" #t class="form-control"(change)="Country(t.value)">
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="pakisthan">Pakisthan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>DOB </label>
+                    <input type="date" class="form-control" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.DOB">
+                </div>
+                <div class="form-group">
+                    <label>Gender </label>
+                    <label class="radio-inline" [(ngModel)]="reg.Gender">
+                        <input type="radio" name="optradio" checked>Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="optradio">Female
+                      </label>                      
+                </div>
+                <div class="form-group">
+                    <label>Language </label>
+                    <select name="country" id="country" class="form-control" [(ngModel)]="reg.Language">
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="C#">C#</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>favourate color </label>
+                    <input type="color"  id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.favouratecolor">
+                </div>
+                <div class="form-group">
+                    <label>Upload photography </label>
+                    <input type="file"  id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.Upload">
+                </div>
+                <div class="form-group">
+                    <label>Email </label>
+                    <input type="email" class="form-control" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.Email">
+                </div>
+                <div class="form-group">
+                    <label>Set time </label>
+                    <input type="time" class="form-control" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.Set">
+                </div>
+                <div class="form-group">
+                    <label>Web site Address </label>
+                    <input type="text" class="form-control" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.Web">
+                </div>
+                <div class="form-group">
+                    <label>CGPA</label>
+                    <input type="range" class="form-control" id="dob" placeholder="Enter Date of Birth" [(ngModel)]="reg.CGPA">
+                </div>
+
+
+                <button type="submit" class="btn btn-primary" (click)="save()">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

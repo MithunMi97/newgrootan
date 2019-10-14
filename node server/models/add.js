@@ -43,6 +43,7 @@ const AddSchema = new mongoose.Schema(
             required: true,
             maxlength: 32
         }, 
+
         
         Email: {
             type: String,
@@ -68,7 +69,13 @@ const AddSchema = new mongoose.Schema(
             type: String,
             required: true,
             maxlength: 32
-        }, 
+        },
+        
+        photo: {
+            type: String,
+            required: true,
+            maxlength: 32
+        },
         CGPA: {
             type: Number,
             required: true,

@@ -22,13 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
    steps:
-  - name: Get current time
-    uses: srfrnk/current-time@master
-    id: current-time
-    with:
-      format: YYYYMMDD
-  - name: Use current time
-    env:
-      TIME: "${{ steps.current-time.outputs.time }}"
-      F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
-    run: echo $TIME $F_TIME
+    - name: Get current time
+      uses: srfrnk/current-time@master
+      id: current-time
+      with:
+        format: YYYYMMDD
+    - name: Use current time
+      env:
+        TIME: "${{ steps.current-time.outputs.time }}"
+        F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
+      run: echo $TIME $F_TIME
